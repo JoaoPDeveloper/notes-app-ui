@@ -145,6 +145,7 @@ const App = () => {
   return (
     <div className="app-container">
       <form
+      style={{fontFamily:'Space Mono'}}
         className="note-form"
         onSubmit={(event) =>
           selectedNote
@@ -152,7 +153,11 @@ const App = () => {
             : handleAddNote(event)
         }
       >
+            <h1 className="text-start">
+        Space Notes
+      </h1>
         <input
+              style={{fontFamily:'Space Mono'}}
           value={title}
           onChange={(event) =>
             setTitle(event.target.value)
@@ -162,6 +167,7 @@ const App = () => {
         ></input>
         <textarea
           value={content}
+          style={{fontFamily: 'Space Mono'}}
           onChange={(event) =>
             setContent(event.target.value)
           }
@@ -178,7 +184,7 @@ const App = () => {
             </button>
           </div>
         ) : (
-          <button type="submit">Adicionar Nota</button>
+          <button type="submit" style={{fontFamily: 'Space Mono'}}>Adicionar Nota</button>
         )}
       </form>
       <div className="notes-grid">
